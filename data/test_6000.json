@@ -869,30 +869,30 @@
     },
     "31": {
         "idx": 31,
-        "correct": "briddle wood dr trinity nc",
+        "correct": "bridlewood dr trinity nc",
         "tran_0": {
-            "query": "rbiddle wood dr trinity nc",
+            "query": "rbidlewood dr trinity nc",
             "pos": 0
         },
         "tran_1": {
-            "query": "briddle wood dr tirnity nc",
-            "pos": 3
+            "query": "bridlewood dr tirnity nc",
+            "pos": 2
         },
         "typo_0": {
-            "query": "briddle woos dr trinity nc",
-            "pos": 1
+            "query": "bridlewoos dr trinity nc",
+            "pos": 0
         },
         "typo_1": {
-            "query": "briddle wood dr tribity nc",
-            "pos": 3
+            "query": "bridlewood dr tribity nc",
+            "pos": 2
         },
         "orth_0": {
-            "query": "bridou wood dr trinity nc",
+            "query": "bridouwood dr trinity nc",
             "pos": 0
         },
         "orth_1": {
-            "query": "briddle wound dr trinity nc",
-            "pos": 1
+            "query": "bridlewound dr trinity nc",
+            "pos": 0
         }
     },
     "32": {
@@ -1485,29 +1485,29 @@
     },
     "53": {
         "idx": 53,
-        "correct": "NW ct MiamiFL",
+        "correct": "NW ct Miami FL",
         "tran_0": {
-            "query": "NW ct MiaimFL",
+            "query": "NW ct Miaim FL",
             "pos": 2
         },
         "tran_1": {
-            "query": "NW ct iMamiFL",
+            "query": "NW ct iMami FL",
             "pos": 2
         },
         "typo_0": {
-            "query": "NW ct MiamiFK",
+            "query": "NW ct Miani FL",
             "pos": 2
         },
         "typo_1": {
-            "query": "NW ct MkamiFL",
+            "query": "NW ct Mkami FL",
             "pos": 2
         },
         "orth_0": {
-            "query": "NW ct MaiamiFL",
+            "query": "NW ct Maiami FL",
             "pos": 2
         },
         "orth_1": {
-            "query": "NW ct MiamieFL",
+            "query": "NW ct Miamie FL",
             "pos": 2
         }
     },
@@ -2129,25 +2129,25 @@
     },
     "76": {
         "idx": 76,
-        "correct": "Colfax and wanshigthon st",
+        "correct": "Colfax and washington st",
         "tran_0": {
-            "query": "Colfax adn wanshigthon st",
+            "query": "Colfax adn washington st",
             "pos": 1
         },
         "tran_1": {
-            "query": "oClfax and wanshigthon st",
+            "query": "oClfax and washington st",
             "pos": 0
         },
         "typo_0": {
-            "query": "Colfas and wanshigthon st",
+            "query": "Colfas and washington st",
             "pos": 0
         },
         "typo_1": {
-            "query": "Colfax and wansjigthon st",
+            "query": "Colfax and wasjington st",
             "pos": 2
         },
         "orth_0": {
-            "query": "Cofax and wanshigthon st",
+            "query": "Cofax and washington st",
             "pos": 0
         },
         "orth_1": {
@@ -3165,29 +3165,29 @@
     },
     "113": {
         "idx": 113,
-        "correct": "briddlewood dr",
+        "correct": "bridlewood dr",
         "tran_0": {
-            "query": "brdidlewood dr",
-            "pos": 0
-        },
-        "tran_1": {
-            "query": "briddelwood dr",
-            "pos": 0
-        },
-        "typo_0": {
-            "query": "briddlewoid dr",
-            "pos": 0
-        },
-        "typo_1": {
-            "query": "briddlewold dr",
-            "pos": 0
-        },
-        "orth_0": {
             "query": "bridlewood dr",
             "pos": 0
         },
+        "tran_1": {
+            "query": "bridelwood dr",
+            "pos": 0
+        },
+        "typo_0": {
+            "query": "bridlewoid dr",
+            "pos": 0
+        },
+        "typo_1": {
+            "query": "bridlewold dr",
+            "pos": 0
+        },
+        "orth_0": {
+            "query": "briddlewood dr",
+            "pos": 0
+        },
         "orth_1": {
-            "query": "briddalwood dr",
+            "query": "bridalwood dr",
             "pos": 0
         }
     },
@@ -3249,30 +3249,30 @@
     },
     "116": {
         "idx": 116,
-        "correct": "briddle wood dr trinity nc",
+        "correct": "bridlewood dr trinity nc",
         "tran_0": {
-            "query": "briddle wood dr rtinity nc",
-            "pos": 3
+            "query": "bridlewood dr rtinity nc",
+            "pos": 2
         },
         "tran_1": {
-            "query": "briddle wodo dr trinity nc",
-            "pos": 1
+            "query": "bridlewodo dr trinity nc",
+            "pos": 0
         },
         "typo_0": {
-            "query": "briddle wood dr trijity nc",
-            "pos": 3
+            "query": "bridlewood dr trijity nc",
+            "pos": 2
         },
         "typo_1": {
-            "query": "briddls wood dr trinity nc",
+            "query": "bridlswood dr trinity nc",
             "pos": 0
         },
         "orth_0": {
-            "query": "briddel wood dr trinity nc",
+            "query": "bridllewood dr trinity nc",
             "pos": 0
         },
         "orth_1": {
-            "query": "briddle wood dr trinty nc",
-            "pos": 3
+            "query": "bridlewood dr trinty nc",
+            "pos": 2
         }
     },
     "117": {
@@ -3473,29 +3473,29 @@
     },
     "124": {
         "idx": 124,
-        "correct": "Ossippee clarks",
+        "correct": "ossipee clarks",
         "tran_0": {
-            "query": "Ossippee calrks",
+            "query": "ossipee calrks",
             "pos": 1
         },
         "tran_1": {
-            "query": "Osspipee clarks",
+            "query": "osspiee clarks",
             "pos": 0
         },
         "typo_0": {
-            "query": "Osslppee clarks",
+            "query": "osslpee clarks",
             "pos": 0
         },
         "typo_1": {
-            "query": "Ossippee cladks",
+            "query": "ossipee cladks",
             "pos": 1
         },
         "orth_0": {
-            "query": "Ossipee clarks",
+            "query": "ossippee clarks",
             "pos": 0
         },
         "orth_1": {
-            "query": "Osippi clarks",
+            "query": "ossipi clarks",
             "pos": 0
         }
     },
@@ -3977,30 +3977,30 @@
     },
     "142": {
         "idx": 142,
-        "correct": "MercedesBenz Superdome",
+        "correct": "Mercedes Benz Superdome",
         "tran_0": {
-            "query": "MercedesBenz Supedrome",
-            "pos": 1
+            "query": "Mercedes Benz Supedrome",
+            "pos": 2
         },
         "tran_1": {
-            "query": "MercedeBsenz Superdome",
-            "pos": 0
-        },
-        "typo_0": {
-            "query": "MercedesBdnz Superdome",
-            "pos": 0
-        },
-        "typo_1": {
-            "query": "MercedesBenz Shperdome",
+            "query": "Mercedes Bnez Superdome",
             "pos": 1
         },
+        "typo_0": {
+            "query": "Mercedes Bdnz Superdome",
+            "pos": 1
+        },
+        "typo_1": {
+            "query": "Mercedes Benz Shperdome",
+            "pos": 2
+        },
         "orth_0": {
-            "query": "MersaidesBenz Superdome",
+            "query": "Mersaides Benz Superdome",
             "pos": 0
         },
         "orth_1": {
-            "query": "MercedesBenz Superdom",
-            "pos": 1
+            "query": "Mercedes Benz Superdom",
+            "pos": 2
         }
     },
     "143": {
@@ -4985,57 +4985,57 @@
     },
     "178": {
         "idx": 178,
-        "correct": "E south hillsdalein",
+        "correct": "E south hillsdale in",
         "tran_0": {
-            "query": "E sotuh hillsdalein",
+            "query": "E sotuh hillsdale in",
             "pos": 1
         },
         "tran_1": {
-            "query": "E south hillsadlein",
+            "query": "E south hillsadle in",
             "pos": 2
         },
         "typo_0": {
-            "query": "E sputh hillsdalein",
+            "query": "E sputh hillsdale in",
             "pos": 1
         },
         "typo_1": {
-            "query": "E south hillsdaleln",
+            "query": "E south hillsdake in",
             "pos": 2
         },
         "orth_0": {
-            "query": "E south hillsdslein",
+            "query": "E south hillsdsle in",
             "pos": 2
         },
         "orth_1": {
-            "query": "E south hilldalein",
+            "query": "E south hilldale in",
             "pos": 2
         }
     },
     "179": {
         "idx": 179,
-        "correct": "NE Lakewood Ct Lees SummitMo",
+        "correct": "NE Lakewood Ct Lees Summit Mo",
         "tran_0": {
-            "query": "NE Lakewood Ct eLes SummitMo",
+            "query": "NE Lakewood Ct eLes Summit Mo",
             "pos": 3
         },
         "tran_1": {
-            "query": "NE Lakewood Ct Lees SmumitMo",
+            "query": "NE Lakewood Ct Lees Smumit Mo",
             "pos": 4
         },
         "typo_0": {
-            "query": "NE Lakesood Ct Lees SummitMo",
+            "query": "NE Lakesood Ct Lees Summit Mo",
             "pos": 1
         },
         "typo_1": {
-            "query": "NE Lakewood Ct Leee SummitMo",
+            "query": "NE Lakewood Ct Leee Summit Mo",
             "pos": 3
         },
         "orth_0": {
-            "query": "NE Lakewool Ct Lees SummitMo",
+            "query": "NE Lakewool Ct Lees Summit Mo",
             "pos": 1
         },
         "orth_1": {
-            "query": "NE Lakewood Ct Lees SubmitMo",
+            "query": "NE Lakewood Ct Lees Submit Mo",
             "pos": 4
         }
     },
@@ -6889,29 +6889,29 @@
     },
     "246": {
         "idx": 246,
-        "correct": "Baristas restaurant",
+        "correct": "Barista restaurant",
         "tran_0": {
-            "query": "Baristas rsetaurant",
+            "query": "Barista rsetaurant",
             "pos": 1
         },
         "tran_1": {
-            "query": "Baristsa restaurant",
+            "query": "Barisat restaurant",
             "pos": 0
         },
         "typo_0": {
-            "query": "Bzristas restaurant",
+            "query": "Bzrista restaurant",
             "pos": 0
         },
         "typo_1": {
-            "query": "Baristas restayrant",
+            "query": "Barista restayrant",
             "pos": 1
         },
         "orth_0": {
-            "query": "Barristas restaurant",
+            "query": "Barrista restaurant",
             "pos": 0
         },
         "orth_1": {
-            "query": "Baristas restaraunt",
+            "query": "Barista restaraunt",
             "pos": 1
         }
     },
@@ -9325,29 +9325,29 @@
     },
     "333": {
         "idx": 333,
-        "correct": "Batistas restaurant las vegas",
+        "correct": "Barista restaurant las vegas",
         "tran_0": {
-            "query": "Batistas restaurant als vegas",
+            "query": "Barista restaurant als vegas",
             "pos": 2
         },
         "tran_1": {
-            "query": "Batistsa restaurant las vegas",
+            "query": "Baritsa restaurant las vegas",
             "pos": 0
         },
         "typo_0": {
-            "query": "Batistas restaurant las vrgas",
+            "query": "Barista restaurant las vrgas",
             "pos": 3
         },
         "typo_1": {
-            "query": "Batictas restaurant las vegas",
+            "query": "Baricta restaurant las vegas",
             "pos": 0
         },
         "orth_0": {
-            "query": "Batistas restaurant las vegad",
+            "query": "Barista restaurant las vegad",
             "pos": 3
         },
         "orth_1": {
-            "query": "Batistas restaurant los vegas",
+            "query": "Barista restaurant los vegas",
             "pos": 2
         }
     },
@@ -18677,29 +18677,29 @@
     },
     "667": {
         "idx": 667,
-        "correct": "nw lane parklandfl",
+        "correct": "nw lane parkland fl",
         "tran_0": {
-            "query": "nw laen parklandfl",
+            "query": "nw laen parkland fl",
             "pos": 1
         },
         "tran_1": {
-            "query": "nw lane parklandlf",
+            "query": "nw lane pakrland fl",
             "pos": 2
         },
         "typo_0": {
-            "query": "nw lane parklandfo",
+            "query": "nw lane parlland fl",
             "pos": 2
         },
         "typo_1": {
-            "query": "nw lame parklandfl",
+            "query": "nw lame parkland fl",
             "pos": 1
         },
         "orth_0": {
-            "query": "nw lane paklandfl",
+            "query": "nw lane pakland fl",
             "pos": 2
         },
         "orth_1": {
-            "query": "nw lane parlandfl",
+            "query": "nw lane parland fl",
             "pos": 2
         }
     },
@@ -19937,29 +19937,29 @@
     },
     "712": {
         "idx": 712,
-        "correct": "Apalachee pkwy MS tallahasseefl",
+        "correct": "Apalachee pkwy MS tallahassee fl",
         "tran_0": {
-            "query": "Apalacehe pkwy MS tallahasseefl",
+            "query": "Apalacehe pkwy MS tallahassee fl",
             "pos": 0
         },
         "tran_1": {
-            "query": "Apalachee kpwy MS tallahasseefl",
+            "query": "Apalachee kpwy MS tallahassee fl",
             "pos": 1
         },
         "typo_0": {
-            "query": "Apalachee pkwy MS tallahaxseefl",
+            "query": "Apalachee pkwy MS tallahaxsee fl",
             "pos": 3
         },
         "typo_1": {
-            "query": "Apalachwe pkwy MS tallahasseefl",
+            "query": "Apalachwe pkwy MS tallahassee fl",
             "pos": 0
         },
         "orth_0": {
-            "query": "Apalachee pkwy MS tallahassefl",
+            "query": "Apalachee pkwy MS tallahasse fl",
             "pos": 3
         },
         "orth_1": {
-            "query": "Apalachee pkwy MS talahassifl",
+            "query": "Apalachee pkwy MS talahassi fl",
             "pos": 3
         }
     },
@@ -22289,29 +22289,29 @@
     },
     "796": {
         "idx": 796,
-        "correct": "Apalachee pkwy tallahasseefl",
+        "correct": "Apalachee pkwy tallahassee fl",
         "tran_0": {
-            "query": "Apalachee pkwy tallaahsseefl",
+            "query": "Apalachee pkwy tallaahssee fl",
             "pos": 2
         },
         "tran_1": {
-            "query": "Apalachee pkyw tallahasseefl",
+            "query": "Apalachee pkyw tallahassee fl",
             "pos": 1
         },
         "typo_0": {
-            "query": "Alalachee pkwy tallahasseefl",
+            "query": "Alalachee pkwy tallahassee fl",
             "pos": 0
         },
         "typo_1": {
-            "query": "Apalachee pkwy tallamasseefl",
+            "query": "Apalachee pkwy tallamassee fl",
             "pos": 2
         },
         "orth_0": {
-            "query": "Apalachee pkwy tallahassefl",
+            "query": "Apalachee pkwy tallahasse fl",
             "pos": 2
         },
         "orth_1": {
-            "query": "Apalachee pkwy talahassefl",
+            "query": "Apalachee pkwy talahasse fl",
             "pos": 2
         }
     },
@@ -23773,29 +23773,29 @@
     },
     "849": {
         "idx": 849,
-        "correct": "S Van Buren St MidvaleUT",
+        "correct": "S Van Buren St Midvale UT",
         "tran_0": {
-            "query": "S Van Bruen St MidvaleUT",
+            "query": "S Van Bruen St Midvale UT",
             "pos": 2
         },
         "tran_1": {
-            "query": "S Vna Buren St MidvaleUT",
+            "query": "S Vna Buren St Midvale UT",
             "pos": 1
         },
         "typo_0": {
-            "query": "S Van Burej St MidvaleUT",
+            "query": "S Van Burej St Midvale UT",
             "pos": 2
         },
         "typo_1": {
-            "query": "S Vwn Buren St MidvaleUT",
+            "query": "S Vwn Buren St Midvale UT",
             "pos": 1
         },
         "orth_0": {
-            "query": "S Van Burien St MidvaleUT",
+            "query": "S Van Burien St Midvale UT",
             "pos": 2
         },
         "orth_1": {
-            "query": "S Van Buren St MidvaulUT",
+            "query": "S Van Buren St Midvaul UT",
             "pos": 4
         }
     },
@@ -24389,29 +24389,29 @@
     },
     "871": {
         "idx": 871,
-        "correct": "Lax paking lot c",
+        "correct": "Lax parking lot c",
         "tran_0": {
-            "query": "Lxa paking lot c",
+            "query": "Lxa parking lot c",
             "pos": 0
         },
         "tran_1": {
-            "query": "Lax paking olt c",
+            "query": "Lax parking olt c",
             "pos": 2
         },
         "typo_0": {
-            "query": "Lac paking lot c",
+            "query": "Lac parking lot c",
             "pos": 0
         },
         "typo_1": {
-            "query": "Lax laking lot c",
+            "query": "Lax larking lot c",
             "pos": 1
         },
         "orth_0": {
-            "query": "Lax parking lot c",
+            "query": "Lax paking lot c",
             "pos": 1
         },
         "orth_1": {
-            "query": "Lux paking lot c",
+            "query": "Lux parking lot c",
             "pos": 0
         }
     },
@@ -25537,29 +25537,29 @@
     },
     "912": {
         "idx": 912,
-        "correct": "apalachee pkwy Taallahassefl",
+        "correct": "apalachee pkwy Taallahasse fl",
         "tran_0": {
-            "query": "apalachee pkyw Taallahassefl",
+            "query": "apalachee pkyw Taallahasse fl",
             "pos": 1
         },
         "tran_1": {
-            "query": "aplaachee pkwy Taallahassefl",
+            "query": "aplaachee pkwy Taallahasse fl",
             "pos": 0
         },
         "typo_0": {
-            "query": "apalacgee pkwy Taallahassefl",
+            "query": "apalacgee pkwy Taallahasse fl",
             "pos": 0
         },
         "typo_1": {
-            "query": "apalachee piwy Taallahassefl",
+            "query": "apalachee piwy Taallahasse fl",
             "pos": 1
         },
         "orth_0": {
-            "query": "apalachi pkwy Taallahassefl",
+            "query": "apalachi pkwy Taallahasse fl",
             "pos": 0
         },
         "orth_1": {
-            "query": "apalachee pkwy Tallahassefl",
+            "query": "apalachee pkwy Tallahasse fl",
             "pos": 2
         }
     },
@@ -27413,29 +27413,29 @@
     },
     "979": {
         "idx": 979,
-        "correct": "billingsley road suite b charlotte nc",
+        "correct": "billingsley road suite charlotte nc",
         "tran_0": {
-            "query": "billingsley road suite b charlotet nc",
-            "pos": 4
+            "query": "billingsley road suite charlotet nc",
+            "pos": 3
         },
         "tran_1": {
-            "query": "billingsley road siute b charlotte nc",
+            "query": "billingsley road siute charlotte nc",
             "pos": 2
         },
         "typo_0": {
-            "query": "billingsley road suite b cuarlotte nc",
-            "pos": 4
+            "query": "billingsley road suite cuarlotte nc",
+            "pos": 3
         },
         "typo_1": {
-            "query": "billingsley road zuite b charlotte nc",
+            "query": "billingsley road zuite charlotte nc",
             "pos": 2
         },
         "orth_0": {
-            "query": "billinsley road suite b charlotte nc",
+            "query": "billinsley road suite charlotte nc",
             "pos": 0
         },
         "orth_1": {
-            "query": "billingsly road suite b charlotte nc",
+            "query": "billingsly road suite charlotte nc",
             "pos": 0
         }
     },
