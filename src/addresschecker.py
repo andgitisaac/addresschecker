@@ -563,9 +563,10 @@ class WordFrequency(object):
         """ Remove words that its frequency is less than or equal to the given threshold.
 
         Arguments:
-            words {[list(str)]} -- A list of words.
+            threshold(int)
         """
-        for key in self._dictionary.keys():
+        keys = [x for x in self._dictionary.keys()]
+        for key in keys:
             if self._dictionary[key] <= threshold:
                 self._dictionary.pop(key)
         self._update_dictionary()
