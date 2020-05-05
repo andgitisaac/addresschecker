@@ -1,5 +1,5 @@
 """ The Address Checker Module """
-from .spellchecker import SpellChecker, WordFrequency
+from .addresschecker import AddressChecker, WordFrequency
 from .info import (
     __author__,
     __maintainer__,
@@ -12,4 +12,4 @@ from .info import (
 )
 
 
-__all__ = ["SpellChecker", "WordFrequency"]
+__all__ = ["AddressChecker", "WordFrequency"]
