@@ -346,7 +346,9 @@ class WordFrequency(object):
             case_sensitive {bool} -- Whether to treat the word in dictionary \
                 case-sensitive or not. (default: {False})
         """
-        
+       
+        self._valid_char = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-\'\"0123456789.()')
+
         self._dictionary = Counter()
         self._total_words = 0
         self._unique_words = 0
@@ -547,6 +549,20 @@ class WordFrequency(object):
 
         return self._dictionary.pop(word, default)
 
+    def remove_chars(self):
+        """ Remove chars that is not on self._valid_char 
+
+        Argumemts:
+            None
+        """
+        chars = [ENSURE_UNICODE(c) for c in self._valid_char]
+        for char in chars:
+            for word in self._dictionary.items():
+                if char in word:
+                    self._dictionary.pop(word)
+        self._update_dictionary()
+        
+
     def remove_words(self, words):
         """ Remove a list of words from the dictionary.
 
@@ -567,3 +583,4 @@ class WordFrequency(object):
             if self._dictionary[key] <= threshold:
                 self._dictionary.pop(key)
         self._update_dictionary()
+
