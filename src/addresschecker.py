@@ -8,6 +8,9 @@ from collections import Counter
 from .utils import load_file, write_file, _parse_into_words, ENSURE_UNICODE
 
 
+# DICTIONARY_NAME = "en.json.gz"
+DICTIONARY_NAME = "en.char.json.gz"
+
 class AddressChecker(object):
     __slots__ = ["_distance", "_tokenizer", "_case_sensitive", "_word_frequency"]
         
@@ -92,7 +95,6 @@ class AddressChecker(object):
         """
 
         # Currently, we focus on the addresses in English only.
-        DICTIONARY_NAME = "en.json.gz"
         here = os.path.dirname(__file__)
         full_filename = os.path.join(here, "resources", DICTIONARY_NAME)
         if not os.path.exists(full_filename):
@@ -204,7 +206,7 @@ class AddressChecker(object):
             word = word.lower()
         
         if not self._need_check(word):
-            return set([word])
+            return set([word])        
         
         letters = self._word_frequency.letters
         splits = [(word[:i], word[i:]) for i in range(len(word) + 1)]
