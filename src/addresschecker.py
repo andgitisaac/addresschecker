@@ -92,7 +92,7 @@ class AddressChecker(object):
         """
 
         # Currently, we focus on the addresses in English only.
-        DICTIONARY_NAME = "en.json.gz"
+        DICTIONARY_NAME = "en.char.json.gz"
         here = os.path.dirname(__file__)
         full_filename = os.path.join(here, "resources", DICTIONARY_NAME)
         if not os.path.exists(full_filename):
@@ -329,6 +329,7 @@ class AddressChecker(object):
 
 class WordFrequency(object):
     __slots__ = [
+        "_valid_char",
         "_dictionary",
         "_total_words",
         "_unique_words",
@@ -387,6 +388,9 @@ class WordFrequency(object):
             key = key.lower()
             
         return self._dictionary.get(key, 0)    
+
+    def __str__(self):
+        return "Total words: {}\t Unique words: {}".format(self._total_words, self._unique_words)
     
     @property
     def dictionary(self):
