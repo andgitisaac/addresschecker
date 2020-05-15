@@ -7,9 +7,7 @@ from collections import Counter
 
 from .utils import load_file, write_file, _parse_into_words, ENSURE_UNICODE
 
-
-# DICTIONARY_NAME = "en.json.gz"
-DICTIONARY_NAME = "en.char.json.gz"
+DEFAULT_DICTIONARY_NAME = "en.char.json.gz"
 
 class AddressChecker(object):
     __slots__ = ["_distance", "_tokenizer", "_case_sensitive", "_word_frequency"]
@@ -87,7 +85,7 @@ class AddressChecker(object):
         else:
             raise ValueError("The edit distance should be 1 or 2.")
     
-    def load_dictionary(self):
+    def load_dictionary(self, dictionary_name=None):
         """ Load the word frequency list.
 
         Raises:
@@ -95,8 +93,11 @@ class AddressChecker(object):
         """
 
         # Currently, we focus on the addresses in English only.
+        if not dictionary_name:
+            dictionary_name = DEFAULT_DICTIONARY_NAME
+
         here = os.path.dirname(__file__)
-        full_filename = os.path.join(here, "resources", DICTIONARY_NAME)
+        full_filename = os.path.join(here, "resources", dictionary_name)
         if not os.path.exists(full_filename):
             raise ValueError("The language dictionary does not exist!")
         self._word_frequency.load_dictionary(full_filename)
@@ -236,8 +237,9 @@ class AddressChecker(object):
                 for w2 in self.edit_distance_1(w1)
         )
 
-    def candidates(self, word):
-        """ Return potential spelling corrections according to the edit distance.
+    def _candidates(self, word):
+        """ Helper of returning all of the potential spelling corrections of \
+            a word according to the edit distance.
 
         Arguments:
             word {[str]} -- A query word.
@@ -263,35 +265,61 @@ class AddressChecker(object):
             known_res_2 = self.known(res_2)
             if known_res_2: return known_res_2
         return set([word])
-
-    def corrections(self, word, k=1, method="naive"):
-        """ Obtain the top-k candidates and scores for the corrected misspelling.
+    
+    def corrections(self, sentence, k=10, method="naive"):
+        """ Return the top-k candidates of each word in a given sentence.
 
         Arguments:
-            word {[type]} -- A query word.
-            k {int} -- Number of candidates to return. (default: {1})
+            word {[type]} -- A query sentence.
+            k {int} -- Number of candidates to return. (default: {10})
             method {str} -- The score function. (default: {"naive"})
 
         Raises:
             ValueError: if the score function is invalid.
 
         Returns:
-            [list(str, double)] -- A list of candidates with corresponding score.
+            [list(tuple(str, list(str)))] -- A list of (query word, candidates).
+        """
+        outputs = []
+        for word in self._split_words(sentence):
+            if word.isdigit():
+                candidates = [word]
+            else:
+                candidates = self._corrections(word, k=k, method=method)
+            outputs.append(
+                (word, candidates)
+            )
+        return outputs
+
+    def _corrections(self, word, k, method="naive"):
+        """ Helper for returning the top-k candidates of the word for the corrected misspelling.
+
+        Arguments:
+            word {[type]} -- A query word.
+            k {int} -- Number of candidates to return.
+            method {str} -- The score function. (default: {"naive"})
+
+        Raises:
+            ValueError: if the score function is invalid.
+
+        Returns:
+            [list(str)] -- A list of candidates.
         """
 
         if method not in ["naive"]:
             raise ValueError("Invalid method for word score calculation.")
 
         word = ENSURE_UNICODE(word)
-        candidates = list(self.candidates(word))
+        candidates = list(self._candidates(word))
         candidates = sorted(
             candidates,
             reverse=True,
             key=lambda x: self.calculate_word_score(x, method=method)
         )
         top_k_candidates = candidates[:k]
-        top_k_candidates_with_scores = [(x, self.calculate_word_score(x)) for x in top_k_candidates]
-        return top_k_candidates_with_scores
+        # top_k_candidates_with_scores = [(x, self.calculate_word_score(x)) for x in top_k_candidates]
+        # return top_k_candidates_with_scores
+        return top_k_candidates
 
     def calculate_word_score(self, word, method="naive"):
         """Calculate the score of the word. \
@@ -453,8 +481,11 @@ class WordFrequency(object):
             self._letters.update(key)
 
     def tokenize(self, sentence):
-        """ Split the sentence into words using the tokenizer. Default tokenizer \
-            split the sentence on a whitespace.
+        """ Split the sentence into words using the tokenizer. \
+            Default tokenizer split the sentence on a whitespace or punctuation except:
+                1. underscore (_)
+                2. pound sign (#)
+                3. apostrophe (')
 
         Arguments:
             sentence {[str]} -- A sentence need to be splitted.
