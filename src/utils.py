@@ -86,9 +86,12 @@ def write_file(filepath, encoding, gzipped, data):
 
 
 def _parse_into_words(text):
-    """ Parse the text into words; currently removes punctuation
+    """ Parse the text into words; currently taking punctuation as delimiter except:
+        1. underscore (_)
+        2. pound sign (#)
+        3. apostrophe (')
 
         Args:
             text (str): The text to split into words
     """
-    return re.findall(r"\w+", text.lower())
+    return re.findall(r"[\w#']+", text.lower())
