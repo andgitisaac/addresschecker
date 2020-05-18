@@ -250,6 +250,8 @@ class AddressChecker(object):
         word = ENSURE_UNICODE(word)
         if not self._need_check(word):
             return set([word])
+        if word in self._word_frequency._valid_abbreviation:
+            return set([word])
         
         # Obtain edit dist 1 candidates
         res_1 = self.edit_distance_1(word)
@@ -360,6 +362,7 @@ class AddressChecker(object):
 class WordFrequency(object):
     __slots__ = [
         "_valid_char",
+        "_valid_abbreviation",
         "_dictionary",
         "_total_words",
         "_unique_words",
@@ -379,6 +382,10 @@ class WordFrequency(object):
         """
        
         self._valid_char = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-\'\"0123456789.()')
+        self._valid_abbreviation = set(abbr.lower() for abbr in [
+            'NW', 'NE', 'SW', 'SE', 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', \
+            'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', \
+            'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY', 'Ave', 'Rd', 'St', 'Ln', 'Dr', 'Way', 'Blvd'])
 
         self._dictionary = Counter()
         self._total_words = 0
