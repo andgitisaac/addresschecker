@@ -1,4 +1,4 @@
-from src.addresschecker import AddressChecker
+from addresschecker.addresschecker import AddressChecker
 
 # Top-K candidates that will be returned
 TOP_K = 5
