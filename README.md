@@ -15,8 +15,10 @@ address_checker.corrections(target_address)       # correction() will return the
 
 ## Incrementally Update Word Frequency List
 
+We also provide method to incrementally update the word frequency list:
+
 ```python
-from addresschecker import Addresschecker
+from addresschecker import AddressChecker
 
 textfile_path = 'incremental_training_data.txt'
 
@@ -24,8 +26,9 @@ address_checker = AddressChecker()
 address_checker._word_frequency._load_textfile(textfile_path)
 ```
 
+To save the new word frequency list:
 ```python
-address_checker.summary()
+address_checker.save_dictionary(new_model_path)
 ```
 
 ## Current Word Frequency List
