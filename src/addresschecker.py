@@ -237,7 +237,7 @@ class AddressChecker(object):
                 for w2 in self.edit_distance_1(w1)
         )
 
-    def _candidates(self, word):
+    def candidates(self, word):
         """ Helper of returning all of the potential spelling corrections of \
             a word according to the edit distance.
 
@@ -312,7 +312,7 @@ class AddressChecker(object):
             raise ValueError("Invalid method for word score calculation.")
 
         word = ENSURE_UNICODE(word)
-        candidates = list(self._candidates(word))
+        candidates = list(self.candidates(word))
         candidates = sorted(
             candidates,
             reverse=True,
@@ -339,13 +339,13 @@ class AddressChecker(object):
         """
         score = 0.0
         if method == "naive":
-            score = self.word_score_naive(word)
+            score = self._word_score_naive(word)
         else:
             raise ValueError("Invalid method for word score calculation.")
             
         return score        
 
-    def word_score_naive(self, word):
+    def _word_score_naive(self, word):
         """ Calculate the probability of the word in the dict.
 
         Arguments:
