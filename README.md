@@ -39,6 +39,7 @@ In order to develop a word frequency list that can correctly detect the misspell
 - [OpenAddress](https://github.com/openaddresses/openaddresses): 100M entries of real address in United States
 - Telenav User Queries: 2M entries of real user queries from Telenav
 
+Current word frequency list contain 158,751 unique words.
 
 ## Note
 This work is part of UW ENGINE(Electrical & Computer Engineering, Innovation and Entrepreneurial) capstone program with Telenav in 2019/2020. For more information please visit [UW ENGINE](https://www.ece.uw.edu/entrepreneurship/entrepreneurial-capstone/). 
