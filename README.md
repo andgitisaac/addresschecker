@@ -1,6 +1,16 @@
 # addresschecker
 Pure Python Address Spell Checking based on [Peter Norvig's Blog Post](https://norvig.com/spell-correct.html) and [Tyler Barrus's pyspellchecker Package](https://github.com/barrust/pyspellchecker).
 
+
+## Installation
+
+To install from source
+```python
+git clone https://github.com/andgitisaac/addresschecker.git
+cd addresschecker
+python setup.py install
+```
+
 ## Quick Start
 
 After installation, we can easily use the `corrections()` member function in the `AddressChecker()`:
