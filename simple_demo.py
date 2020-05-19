@@ -8,6 +8,14 @@ TOP_K = 5
 TIME_FOR_TRAINING = 5
 history_queries = []
 
+# history_queries = [
+#     'Suzzallo and Allen Libraries',
+#     'Sylvan Grove Theater and Columns',
+#     'Odegaard Undergraduate Library',
+#     '3800 Montlake Blvd NE, Seattle, WA 98195',
+#     'Alleyway, 4214 University Way NE, Seattle, WA 98105'
+# ]
+
 # Initialize the Address Checker instance
 address_checker = AddressChecker()
 
@@ -30,7 +38,13 @@ while True:
         # TODO: Incremental Training
         print("==================")
         print("  Updating Model  ")
+        print(address_checker._word_frequency)
+
+        address_checker._word_frequency.load_sentence(history_queries)
+
+        print(address_checker._word_frequency)
         print("==================")
+
 
         # Reset the DB for the next batch of queries.
         history_queries = []

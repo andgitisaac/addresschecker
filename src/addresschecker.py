@@ -28,7 +28,6 @@ class AddressChecker(object):
         self._tokenizer = _parse_into_words if not tokenizer else tokenizer
         self._case_sensitive = case_sensitive
         self._word_frequency = WordFrequency(self._tokenizer, self._case_sensitive)
-
         self.load_dictionary()
 
     def __contains__(self, key):
@@ -394,40 +393,25 @@ class WordFrequency(object):
         self._case_sensitive = case_sensitive
         self._longest_word_length = 0
         self._tokenizer = _parse_into_words if not tokenizer else tokenizer
-    
+
+    def __str__(self):
+        return "Unique words: {}\t Thresholding: {}\t".format(self._unique_words, min(self._dictionary))
+
     def __contains__(self, key):
-        """ Check if the word is in the dictionary.
-
-        Arguments:
-            key {[string]} -- Word needs to be checked.
-
-        Returns:
-            [bool] -- Whether the word is in the dict.
-        """
         key = ENSURE_UNICODE(key)
         if not self._case_sensitive:
             key = key.lower()
-            
         return key in self._dictionary    
 
     def __getitem__(self, key):
-        """ Get the frequency of the word in the dictionary.
-
-        Arguments:
-            key {[string]} -- The query word.
-
-        Returns:
-            [int] -- Frequency of the word in the dict. \
-                Return 0 if it's not in the dict.
-        """
         key = ENSURE_UNICODE(key)
         if not self._case_sensitive:
-            key = key.lower()
-            
+            key = key.lower()    
         return self._dictionary.get(key, 0)    
 
     def __str__(self):
-        return "Total words: {}\t Unique words: {}".format(self._total_words, self._unique_words)
+        th = self._dictionary[min(self._dictionary, key=self._dictionary.get)]
+        return "Total words: {}\t Unique words: {}\t Thresholding: {}\t".format(self._total_words, self._unique_words, th)
     
     @property
     def dictionary(self):
@@ -545,6 +529,10 @@ class WordFrequency(object):
         """
         with load_file(filename, encoding=encoding) as data:
             self._load_text(data, tokenizer)
+            
+    def load_sentence(self, sentences, encoding='utf-8', tokenizer=None):
+        for sentence in sentences:
+            self._load_text(sentence, tokenizer)
 
     def _load_text(self, text, tokenizer=None):
         """ Process the text in the text file to build the dictionary.
