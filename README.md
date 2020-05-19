@@ -1,15 +1,16 @@
 # addresschecker
-
 Pure Python Address Spell Checking based on [Peter Norvig's Blog Post](https://norvig.com/spell-correct.html) and [Tyler Barrus's pyspellchecker Package](https://github.com/barrust/pyspellchecker).
 
 ## Quick Start
+
+After installation, we can easily use the `corrections()` member function in the `AddressChecker()`:
 
 ```python
 from addresschecker import Addresschecker
 
 address_checker = Addresschecker()
-target_address = '1410 NE Campuus Parkwayy'
-address_checker.corrections(target_address)
+target_address = '1410 NE Campuus Parkwayy'       # the input can be a single word or whole address
+address_checker.corrections(target_address)       # correction() will return the top-k candidates
 ```
 
 ## Incrementally Update Word Frequency List
@@ -34,3 +35,8 @@ In order to develop a word frequency list that can correctly detect the misspell
 - [OpenSubtitles](http://opus.nlpl.eu/OpenSubtitles2018.php): 3.2G entries of tokens from English TV and movies subtitles
 - [OpenAddress](https://github.com/openaddresses/openaddresses): 100M entries of real address in United States
 - Telenav User Queries: 2M entries of real user queries from Telenav
+
+
+## Note
+This work is part of UW ENGINE(Electrical & Computer Engineering, Innovation and Entrepreneurial) capstone program with Telenav in 2019/2020. For more information please visit [UW ENGINE](https://www.ece.uw.edu/entrepreneurship/entrepreneurial-capstone/). 
+
