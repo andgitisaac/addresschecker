@@ -43,11 +43,13 @@ If you'd like to tune the model, look at here:
 
 ```python
 """Case Sensitive Configuration"""
+
 # The query sentences/words are treated as case sensitive.
 # Note that one might need to re-train their own word frequency list from scratch when doing this.
 address_checker = Addresschecker(case_sensitive=True)
 
 """Tokenizer Configuration"""
+
 # One can define their own tokenizer to parse the input query.
 def custom_tokenizer(text):
     return re.findall(r"\w+", text)
@@ -56,6 +58,7 @@ address_checker = Addresschecker(tokenizer=custom_tokenizer)
 
 
 """Edit Distance Configuration"""
+
 # The generated candidates will be limited to words that are onle 1 edit distance away from the query word.
 address_checker = Addresschecker(distance=1)
 ```
