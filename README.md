@@ -11,17 +11,24 @@ cd addresschecker
 python setup.py install
 ```
 
-## Quick Start
+## Usage
 
-After installation, we can easily use the `corrections()` member function in the `AddressChecker()`:
+After installation, one should be able to use the `AddressChecker` easily.
 
 ```python
 from addresschecker import Addresschecker
 
 address_checker = Addresschecker()
-target_address = '1410 NE Campuus Parkwayy'       # the input can be a single word or whole address
-address_checker.corrections(target_address)       # correction() will return the top-k candidates
+
+# the input can be just a single word or the entire address
+target_address = "1410 NE Campuus Parkwayy"
+
+# By default, it will return the top-10 candidates of each word
+address_checker.corrections(target_address)
 ```
+
+If you want to obtain all possible candidates for one single word, give `candidates()` a shot.
+
 
 ## Incrementally Update Word Frequency List
 
@@ -33,7 +40,7 @@ from addresschecker import AddressChecker
 textfile_path = 'incremental_training_data.txt'
 
 address_checker = AddressChecker()
-address_checker._word_frequency._load_textfile(textfile_path)
+address_checker._word_frequency._load_text_file(textfile_path)
 ```
 
 To save the new word frequency list:
