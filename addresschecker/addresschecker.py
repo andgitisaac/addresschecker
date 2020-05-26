@@ -12,7 +12,7 @@ DEFAULT_DICTIONARY_NAME = "en.char.json.gz"
 class AddressChecker(object):
     __slots__ = ["_distance", "_tokenizer", "_case_sensitive", "_word_frequency"]
         
-    def __init__(self, distance=2, tokenizer=None, case_sensitive=False):
+    def __init__(self, distance=2, tokenizer=None, case_sensitive=False, dictionary_name=None):
         """ The AddressChecker is used to correct the misspellings in the \
             address string. The algorithm is based on the work of Peter Norvig \
             (https://norvig.com/spell-correct.html).
@@ -22,13 +22,20 @@ class AddressChecker(object):
             tokenizer {function} -- The method to tokenize string. (default: {None})
             case_sensitive {bool} -- Whether to treat the word in dictionary \
                 case-sensitive or not. (default: {False})
+            dictionary_name {[str]} -- The path to the word dictionary under resources/. \
+                (default: {en.char.json.gz})
         """
         
         self.distance = distance
         self._tokenizer = _parse_into_words if not tokenizer else tokenizer
         self._case_sensitive = case_sensitive
         self._word_frequency = WordFrequency(self._tokenizer, self._case_sensitive)
-        self.load_dictionary()
+
+
+        # Currently, we focus on the addresses in English only.
+        if not dictionary_name:
+            dictionary_name = DEFAULT_DICTIONARY_NAME
+        self.load_dictionary(dictionary_name=dictionary_name)
 
     def __contains__(self, key):
         """ Check if the word is in the dictionary.
@@ -90,10 +97,6 @@ class AddressChecker(object):
         Raises:
             ValueError: if the language dictionary does not exist.
         """
-
-        # Currently, we focus on the addresses in English only.
-        if not dictionary_name:
-            dictionary_name = DEFAULT_DICTIONARY_NAME
 
         here = os.path.dirname(__file__)
         full_filename = os.path.join(here, "resources", dictionary_name)
@@ -514,10 +517,14 @@ class WordFrequency(object):
             filename {[str]} -- Filename of the dictionary.
             encoding {str} -- The encoding method. (default: {"utf-8"})
         """
+        print("Loading Dictionary: {}".format(filename))
+
         with load_file(filename, encoding) as data:
             data = data if self._case_sensitive else data.lower()
             self._dictionary.update(json.loads(data, encoding=encoding))
             self._update_dictionary()
+
+        print("Dictionary Loaded!")
 
     def load_text_file(self, filename, encoding="utf-8", tokenizer=None):
         """ Load from a text file to build the dictionary.
