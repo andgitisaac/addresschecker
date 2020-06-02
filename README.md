@@ -19,24 +19,27 @@ python setup.py install
 After installation, one should be able to use the `AddressChecker` easily.
 
 ```python
-from addresschecker import Addresschecker
+from addresschecker import AddressChecker
 
-address_checker = Addresschecker()
+address_checker = AddressChecker()
 
 # the input can be just a single word or the entire address
 target_address = "1410 NE Campuus Parkwayy"
-
-# By default, it will return the top-10 candidates of each word
-address_checker.corrections(target_address)
 ```
 
-If you want to obtain all possible candidates, instead of top-K, for one single word, give `candidates()` a shot.
+By default, it will return the top-1 candidates of each word.
 
 ```python
-target_word = "Washinton"
+>>> address_checker.corrections(target_address)
+[('1410', ['1410']), ('ne', ['ne']), ('campuus', ['campus']), ('parkwayy', ['parkway'])]
+```
 
-# This will give you all candidates according to the current word frequency list.
-address_checker.candidates(target_word)
+If you want to obtain all possible candidates, instead of top-K, for one single word, give `candidates()` a shot. This will give you all candidates according to the current word frequency list.
+
+```python
+>>> target_word = "McDonalds"
+>>> address_checker.candidates(target_word)
+{'mcdonalds', 'mcdonald', 'macdonalds'}
 ```
 
 If you'd like to tune the model, look at here:
