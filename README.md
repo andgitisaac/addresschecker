@@ -11,7 +11,7 @@ To install from source
 ```python
 git clone https://github.com/andgitisaac/addresschecker.git
 cd addresschecker
-python setup.py install
+python3 setup.py install
 ```
 
 ## Quick Start
