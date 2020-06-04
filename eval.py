@@ -8,7 +8,6 @@ TEST_FILE_PATH = "data/test_6000.json"
 FN_FILE_PATH = "fn.txt"
 FP_FILE_PATH = "fp.txt"
 
-
 sp = AddressChecker()
 
 fn_writer = open(FN_FILE_PATH, "w")
